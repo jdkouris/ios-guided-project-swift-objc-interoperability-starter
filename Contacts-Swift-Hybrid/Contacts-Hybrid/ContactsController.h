@@ -8,11 +8,15 @@
 
 #import <Foundation/Foundation.h>
 
+
 NS_ASSUME_NONNULL_BEGIN
+
+@class Contact;
 
 @interface ContactsController : NSObject
 
-@property (nonatomic, readonly, copy) NSArray *contacts;
+@property (nonatomic, readonly, copy) NSArray<Contact *> *contacts;
+//@property (nonatomic, readonly, copy) NSDictionary<NSString *, Contact *> *contacts;
 
 @end
 
