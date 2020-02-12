@@ -11,7 +11,7 @@ import UIKit
 
 class ContactsTableViewController: UITableViewController {
     
-    let contactsController = LSIContactsController()
+    let contactsController = ContactsController()
 	
 	override func viewDidLoad() {
 		super.viewDidLoad()

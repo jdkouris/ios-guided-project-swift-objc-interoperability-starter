@@ -13,6 +13,7 @@ NS_ASSUME_NONNULL_BEGIN
 
 @class Contact;
 
+NS_SWIFT_NAME(ContactsController)
 @interface LSIContactsController : NSObject
 
 @property (nonatomic, readonly, copy) NSArray<Contact *> *contacts;
