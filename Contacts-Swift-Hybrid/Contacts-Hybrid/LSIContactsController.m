@@ -1,21 +1,21 @@
 //
-//  ContactsController.m
+//  LSIContactsController.m
 //  Contacts-Hybrid
 //
 //  Created by John Kouris on 2/11/20.
 //  Copyright © 2020 Lambda, Inc. All rights reserved.
 //
 
-#import "ContactsController.h"
+#import "LSIContactsController.h"
 #import "Contacts_Hybrid-Swift.h"
 
-@interface ContactsController ()
+@interface LSIContactsController ()
 
 @property (nonatomic) NSMutableArray *internalContacts;
 
 @end
 
-@implementation ContactsController
+@implementation LSIContactsController
 
 - (instancetype)init
 {
