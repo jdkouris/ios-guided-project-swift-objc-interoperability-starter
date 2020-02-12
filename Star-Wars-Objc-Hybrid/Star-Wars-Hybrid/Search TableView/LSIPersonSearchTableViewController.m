@@ -41,14 +41,19 @@
 
 - (void)searchBarSearchButtonClicked:(UISearchBar *)searchBar
 {
+    __weak LSIPersonSearchTableViewController *weakSelf = self;
+    
     [LSIPersonController.sharedController searchForPeopleWithSearchTerm:searchBar.text completionHandler:^(NSArray<LSIPerson *> *_Nullable people, NSError *_Nullable error) {
+        
+        LSIPersonSearchTableViewController *strongSelf = weakSelf;
+        if (!strongSelf) return;
         
         if (error) {
             NSLog(@"Error searching for %@: %@", searchBar.text, error);
         }
         
-        self.people = people;
-        [self.tableView reloadData];
+        strongSelf.people = people;
+        [strongSelf.tableView reloadData];
         
     }];
 }
