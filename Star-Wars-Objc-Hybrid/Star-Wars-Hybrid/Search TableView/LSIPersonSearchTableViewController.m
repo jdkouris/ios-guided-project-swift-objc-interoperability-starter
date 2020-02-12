@@ -30,13 +30,11 @@
 - (UITableViewCell *)tableView:(UITableView *)tableView cellForRowAtIndexPath:(NSIndexPath *)indexPath
 {
 	
-	// TODO: Implement a custom cell named PersonTableViewCell.swift
-	
-	UITableViewCell *cell = [tableView dequeueReusableCellWithIdentifier:@"PersonCell" forIndexPath:indexPath];
+	LSIPersonTableviewCell *cell = [tableView dequeueReusableCellWithIdentifier:@"PersonCell" forIndexPath:indexPath];
     
     LSIPerson *person = [self.people objectAtIndex:indexPath.row];
     
-    cell.textLabel.text = person.name;
+    cell.person = person;
 	
     return cell;
 }

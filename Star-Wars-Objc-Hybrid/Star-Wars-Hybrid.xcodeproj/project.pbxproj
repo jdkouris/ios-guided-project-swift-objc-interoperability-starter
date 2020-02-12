@@ -8,6 +8,7 @@
 
 /* Begin PBXBuildFile section */
 		29624ADE23F3A9880096CD69 /* PersonController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 29624ADD23F3A9880096CD69 /* PersonController.swift */; };
+		29624AE023F3B3130096CD69 /* PersonTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 29624ADF23F3B3130096CD69 /* PersonTableViewCell.swift */; };
 		BD101027237A40BE002426B7 /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = BD101026237A40BE002426B7 /* AppDelegate.m */; };
 		BD10102A237A40BE002426B7 /* SceneDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = BD101029237A40BE002426B7 /* SceneDelegate.m */; };
 		BD101032237A40C0002426B7 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = BD101031237A40C0002426B7 /* Assets.xcassets */; };
@@ -21,6 +22,7 @@
 /* Begin PBXFileReference section */
 		29624ADC23F3A9880096CD69 /* Star-Wars-Hybrid-Bridging-Header.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "Star-Wars-Hybrid-Bridging-Header.h"; sourceTree = "<group>"; };
 		29624ADD23F3A9880096CD69 /* PersonController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PersonController.swift; sourceTree = "<group>"; };
+		29624ADF23F3B3130096CD69 /* PersonTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PersonTableViewCell.swift; sourceTree = "<group>"; };
 		BD101022237A40BE002426B7 /* Star-Wars-Hybrid.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "Star-Wars-Hybrid.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		BD101025237A40BE002426B7 /* AppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AppDelegate.h; sourceTree = "<group>"; };
 		BD101026237A40BE002426B7 /* AppDelegate.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = AppDelegate.m; sourceTree = "<group>"; };
@@ -98,6 +100,7 @@
 			children = (
 				BD101040237A4130002426B7 /* LSIPersonSearchTableViewController.h */,
 				BD101041237A4130002426B7 /* LSIPersonSearchTableViewController.m */,
+				29624ADF23F3B3130096CD69 /* PersonTableViewCell.swift */,
 			);
 			path = "Search TableView";
 			sourceTree = "<group>";
@@ -178,6 +181,7 @@
 				BD10102A237A40BE002426B7 /* SceneDelegate.m in Sources */,
 				BD101042237A4130002426B7 /* LSIPersonSearchTableViewController.m in Sources */,
 				29624ADE23F3A9880096CD69 /* PersonController.swift in Sources */,
+				29624AE023F3B3130096CD69 /* PersonTableViewCell.swift in Sources */,
 				BD101045237A42C9002426B7 /* LSIPerson.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
