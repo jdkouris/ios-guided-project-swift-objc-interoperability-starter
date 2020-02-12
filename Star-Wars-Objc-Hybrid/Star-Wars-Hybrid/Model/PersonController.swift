@@ -8,10 +8,15 @@
 
 import Foundation
 
+@objc(LSIPersonController)
 class PersonController: NSObject {
     
     private let baseURL = URL(string: "https://swapi.co/api/people/")!
     
+    @objc(sharedController)
+    static let shared = PersonController()
+    
+    @objc(searchForPeopleWithSearchTerm:completionHandler:)
     func searchForPeople(with searchTerm: String, completion: @escaping ([Person]?, Error?) -> Void) {
         var components = URLComponents(url: baseURL, resolvingAgainstBaseURL: true)!
         let searchItem = URLQueryItem(name: "search", value: searchTerm)
