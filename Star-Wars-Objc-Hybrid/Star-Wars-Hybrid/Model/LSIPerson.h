@@ -12,20 +12,21 @@
 
 // TODO: Add nullabilty annotations
 
+NS_SWIFT_NAME(Person)
 @interface LSIPerson : NSObject
 
 
-@property (nonatomic, copy, readonly) NSString *name;
-@property (nonatomic, copy, readonly) NSString *birthYear;
+@property (nonatomic, copy, readonly, nonnull) NSString *name;
+@property (nonatomic, copy, readonly, nonnull) NSString *birthYear;
 @property (nonatomic, readonly) double height;
-@property (nonatomic, copy, readonly) NSString *eyeColor;
+@property (nonatomic, copy, readonly, nonnull) NSString *eyeColor;
 
-- (instancetype)initWithName:(NSString *)name
-                   birthYear:(NSString *)birthYear
-                      height:(double)height
-                    eyeColor:(NSString *)eyeColor;
+- (nonnull instancetype)initWithName:(nonnull NSString *)name
+                           birthYear:(nonnull NSString *)birthYear
+                              height:(double)height
+                            eyeColor:(nonnull NSString *)eyeColor;
 
-- (instancetype)initWithDictionary:(NSDictionary *)dictionary;
+- (nullable instancetype)initWithDictionary:(nonnull NSDictionary *)dictionary;
 
 
 @end

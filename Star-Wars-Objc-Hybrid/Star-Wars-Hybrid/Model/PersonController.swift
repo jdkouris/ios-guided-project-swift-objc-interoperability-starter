@@ -12,7 +12,7 @@ class PersonController: NSObject {
     
     private let baseURL = URL(string: "https://swapi.co/api/people/")!
     
-    func searchForPeople(with searchTerm: String, completion: @escaping ([LSIPerson]?, Error?) -> Void) {
+    func searchForPeople(with searchTerm: String, completion: @escaping ([Person]?, Error?) -> Void) {
         var components = URLComponents(url: baseURL, resolvingAgainstBaseURL: true)!
         let searchItem = URLQueryItem(name: "search", value: searchTerm)
         components.queryItems = [searchItem]
