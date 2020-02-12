@@ -35,9 +35,23 @@ class PersonController: NSObject {
             }
             
             do {
+                guard let dictionary = try JSONSerialization.jsonObject(with: data, options: []) as? [String: Any] else {
+                    throw NSError(domain: "PersonControllerErrorDomain", code: 1, userInfo: nil)
+                }
                 
+                guard let personDictionaries = dictionary["results"] as? [[String: Any]] else {
+                    throw NSError(domain: "PersonControllerErrorDomain", code: 2, userInfo: nil)
+                }
+                
+                let people = personDictionaries.compactMap { Person(dictionary: $0) }
+                
+                DispatchQueue.main.async {
+                    completion(people, nil)
+                }
             } catch {
-                
+                DispatchQueue.main.async {
+                    completion(nil, error)
+                }
             }
         }.resume()
     }
